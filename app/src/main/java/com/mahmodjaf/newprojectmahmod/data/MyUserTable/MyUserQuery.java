@@ -41,3 +41,4 @@ public interface MyUserQuery
     void update(MyUser...values);
 }
 
+

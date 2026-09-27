@@ -2,14 +2,13 @@ package com.mahmodjaf.newprojectmahmod.data.MytaskTable;
 
 import androidx.room.Entity;
 import androidx.room.PrimaryKey;
-
+@Entity
 public class MyTask {
     /**
      * فئة تمثل مهمة
      */
-    @Entity
-    public class myTask
-    {
+
+
         @PrimaryKey(autoGenerate = true)
         /** رقم المهمة */
         public long keyId;
@@ -28,4 +27,5 @@ public class MyTask {
         /** رقم المستخدم الذي اضاف المهمة */
         public long userId;
     }
-}
+
+
