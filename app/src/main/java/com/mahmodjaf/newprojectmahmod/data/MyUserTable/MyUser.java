@@ -19,14 +19,6 @@ public class MyUser
     public String phone;
     public String passw;
 
-    public String getFullName() {
-        return fullName;
-    }
-
-    public void setFullName(String fullName) {
-        this.fullName = fullName;
-    }
-
     @Override
     public String toString() {
         return "MyUser{" +
@@ -38,4 +30,3 @@ public class MyUser
                 '}';
     }
 }
-
