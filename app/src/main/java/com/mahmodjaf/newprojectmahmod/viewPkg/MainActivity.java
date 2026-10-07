@@ -1,4 +1,4 @@
-package com.mahmodjaf.newprojectmahmod;
+package com.mahmodjaf.newprojectmahmod.viewPkg;
 
 import android.os.Bundle;
 
@@ -8,19 +8,19 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
-import com.mahmodjaf.newprojectmahmod.data.AppDataBase;
+import com.mahmodjaf.newprojectmahmod.R;
 import com.mahmodjaf.newprojectmahmod.data.MySubjectTable.MySubject;
 import com.mahmodjaf.newprojectmahmod.data.MySubjectTable.MySubjectQuery;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity<AppDataBase> extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         //5656+56+5jkghkghbjkghj
         EdgeToEdge.enable(this);
-        setContentView(R.layout.activity_main);
-        //بناء قاعدة بيانات وارجاع مؤشر عليها1
+
+//بناء قاعدة بيانات وارجاع مؤشر عليها1
         AppDataBase db=AppDataBase.getDB(getApplicationContext());
 //2 مؤشر لكائن عمليات  لجدول
         MySubjectQuery subjectQuery = db.getMySubjectQuery();
@@ -34,6 +34,9 @@ public class MainActivity extends AppCompatActivity {
         subjectQuery.insert(s2);
 
 
+
+
+        setContentView(R.layout.activity_main);
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);

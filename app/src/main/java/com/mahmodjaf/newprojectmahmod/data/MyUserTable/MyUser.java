@@ -29,4 +29,7 @@ public class MyUser
                 ", passw='" + passw + '\'' +
                 '}';
     }
+
+    public static class MyUserQuery {
+    }
 }

@@ -9,18 +9,12 @@ import androidx.room.RoomDatabase;
 import com.mahmodjaf.newprojectmahmod.data.MySubjectTable.MySubject;
 import com.mahmodjaf.newprojectmahmod.data.MySubjectTable.MySubjectQuery;
 import com.mahmodjaf.newprojectmahmod.data.MyUserTable.MyUser;
-import com.mahmodjaf.newprojectmahmod.data.MyUserTable.MyUserQuery;
 import com.mahmodjaf.newprojectmahmod.data.MytaskTable.MyTask;
 import com.mahmodjaf.newprojectmahmod.data.MytaskTable.MyTaskQuery;
 
-
-
-/**
- * الفئة المسؤولة عن بناء قاعدة البيانات بكل جداولها
- * وتوفير كائن للتعامل مع قاعدة البيانات
- */
 @Database(entities = {MyUser.class, MySubject.class, MyTask.class}, version = 1)
     public abstract class AppDataBase extends RoomDatabase {
+
         /**
          * كائن للتعامل مع قاعدة البيانات
          */
@@ -30,7 +24,7 @@ import com.mahmodjaf.newprojectmahmod.data.MytaskTable.MyTaskQuery;
          * يعيد كائن لعمليات جدول المستخدمين
          * @return
          */
-        public abstract MyUserQuery getMyUserQuery();
+        public abstract MyUser.MyUserQuery getMyUserQuery();
 
         /**
          * يعيد كائن لعمليات جدول المواضيع
@@ -39,7 +33,7 @@ import com.mahmodjaf.newprojectmahmod.data.MytaskTable.MyTaskQuery;
         public abstract MySubjectQuery getMySubjectQuery();
 
         /**
-         * يعيد كائن لعمليات جدول المهمات
+         * يعيد كائن لعمليات جدول المهام
          * @return
          */
         public abstract MyTaskQuery getMyTaskQuery();
@@ -49,16 +43,18 @@ import com.mahmodjaf.newprojectmahmod.data.MytaskTable.MyTaskQuery;
          * @param context
          * @return
          */
-        public static AppDataBase getDB(Context context){
-            if(db==null)
-            {
-                db = Room.databaseBuilder(context,
+        public static AppDataBase getDB(Context context) {
+            if (db == null) {
+                db = Room.databaseBuilder(
+                                context,
                                 AppDataBase.class,
-                                "samirDataBase") //اسم قاعدة البيانات
+                                "samiDataBase" // اسم قاعدة البيانات
+                        )
                         .fallbackToDestructiveMigration()
                         .allowMainThreadQueries()
                         .build();
             }
+
             return db;
         }
     }
