@@ -7,4 +7,13 @@
     android:layout_height="match_parent"
     tools:context=".viewPkg.activity_register">
 
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="User Registration"
+        android:textSize="34sp"
+        tools:layout_editor_absoluteX="76dp"
+        tools:layout_editor_absoluteY="28dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>
