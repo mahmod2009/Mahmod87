@@ -1,4 +1,4 @@
-package com.mahmodjaf.newprojectmahmod.data.MytaskTable;
+package com.mahmodjaf.newprojectmahmod.model.MytaskTable;
 
 import androidx.room.Entity;
 import androidx.room.PrimaryKey;
@@ -7,7 +7,7 @@ import androidx.room.PrimaryKey;
 @Entity
 public class MyTask {
     @PrimaryKey(autoGenerate = true)
-    public long keyId;
+    public long userid;
 
     public int importance;
 

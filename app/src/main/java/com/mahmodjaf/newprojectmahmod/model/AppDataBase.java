@@ -1,4 +1,4 @@
-package com.mahmodjaf.newprojectmahmod.data;
+package com.mahmodjaf.newprojectmahmod.model;
 
 import android.content.Context;
 
@@ -6,11 +6,11 @@ import androidx.room.Database;
 import androidx.room.Room;
 import androidx.room.RoomDatabase;
 
-import com.mahmodjaf.newprojectmahmod.data.MySubjectTable.MySubject;
-import com.mahmodjaf.newprojectmahmod.data.MySubjectTable.MySubjectQuery;
-import com.mahmodjaf.newprojectmahmod.data.MyUserTable.MyUser;
-import com.mahmodjaf.newprojectmahmod.data.MytaskTable.MyTask;
-import com.mahmodjaf.newprojectmahmod.data.MytaskTable.MyTaskQuery;
+import com.mahmodjaf.newprojectmahmod.model.MySubjectTable.MySubject;
+import com.mahmodjaf.newprojectmahmod.model.MySubjectTable.MySubjectQuery;
+import com.mahmodjaf.newprojectmahmod.model.MyUserTable.MyUser;
+import com.mahmodjaf.newprojectmahmod.model.MytaskTable.MyTask;
+import com.mahmodjaf.newprojectmahmod.model.MytaskTable.MyTaskQuery;
 
 @Database(entities = {MyUser.class, MySubject.class, MyTask.class}, version = 1)
     public abstract class AppDataBase extends RoomDatabase {

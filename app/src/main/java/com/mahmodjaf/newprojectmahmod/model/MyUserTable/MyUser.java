@@ -1,4 +1,4 @@
-package com.mahmodjaf.newprojectmahmod.data.MyUserTable;//Entity = Table =جدول
+package com.mahmodjaf.newprojectmahmod.model.MyUserTable;//Entity = Table =جدول
 //عندما نريد ان نتعامل مع هذه الفئة كجدول معطيات
 
 import androidx.room.ColumnInfo;

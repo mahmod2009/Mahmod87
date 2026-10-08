@@ -9,10 +9,11 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
 import com.mahmodjaf.newprojectmahmod.R;
-import com.mahmodjaf.newprojectmahmod.data.MySubjectTable.MySubject;
-import com.mahmodjaf.newprojectmahmod.data.MySubjectTable.MySubjectQuery;
+import com.mahmodjaf.newprojectmahmod.model.AppDataBase;
+import com.mahmodjaf.newprojectmahmod.model.MySubjectTable.MySubject;
+import com.mahmodjaf.newprojectmahmod.model.MySubjectTable.MySubjectQuery;
 
-public class MainActivity<AppDataBase> extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

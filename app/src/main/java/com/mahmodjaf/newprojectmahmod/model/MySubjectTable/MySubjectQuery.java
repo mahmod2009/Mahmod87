@@ -1,4 +1,4 @@
-package com.mahmodjaf.newprojectmahmod.data.MySubjectTable;
+package com.mahmodjaf.newprojectmahmod.model.MySubjectTable;
 
 import androidx.room.Dao;
 import androidx.room.Delete;

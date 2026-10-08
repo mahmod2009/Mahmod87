@@ -1,4 +1,4 @@
-package com.mahmodjaf.newprojectmahmod.data.MyUserTable;
+package com.mahmodjaf.newprojectmahmod.model.MyUserTable;
 
 import androidx.room.Dao;
 import androidx.room.Delete;
