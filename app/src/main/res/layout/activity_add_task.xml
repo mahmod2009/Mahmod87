@@ -9,7 +9,7 @@
     tools:context=".viewPkg.AddTaskActivity">
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/TextView"
         android:layout_width="427dp"
         android:layout_height="68dp"
         android:gravity="center"
@@ -17,34 +17,34 @@
         android:textSize="34sp" />
 
     <EditText
-        android:id="@+id/editTextText3"
+        android:id="@+id/etTitle"
         android:layout_width="385dp"
-        android:layout_height="wrap_content"
+        android:layout_height="67dp"
         android:layout_margin="20dp"
         android:ems="10"
         android:inputType="text"
         android:text="Task Title" />
 
     <EditText
-        android:id="@+id/editTextText4"
+        android:id="@+id/etDescription"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="70dp"
         android:layout_margin="20dp"
         android:ems="10"
         android:inputType="text"
         android:text="Task Description" />
 
     <EditText
-        android:id="@+id/editTextText5"
+        android:id="@+id/etPriority"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="74dp"
         android:layout_margin="20dp"
         android:ems="10"
         android:inputType="text"
         android:text="Priority (e.g. 1. 2. 3)" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/btnSaveTask"
         android:layout_width="match_parent"
         android:layout_height="57dp"
         android:text="Save Task" />
