@@ -23,7 +23,7 @@ public interface MyTaskQuery {
 
      */
     @Query("SELECT * FROM MyTask ORDER BY importance DESC")
-    List<MyTask> getAllTasks();
+    LiveData<List<MyTask>>  getAllTasks();
 
 
 
@@ -36,15 +36,13 @@ public interface MyTaskQuery {
     تعيد قائمة مهمات كان يتحدث بكل تغيير
 
      */
-    @Query("SELECT * FROM MyTask WHERE userId=:userid_p ORDER BY startTime DESC")
+    @Query("SELECT * FROM MyTask WHERE userid=:userid_p ORDER BY startTime DESC")
     LiveData<List<MyTask>> getAllTaskOrderBy(long userid_p);
-
-
 
     /**
      *
      إرجاع المهمات حسب المستعمل وإذا انتهت أم لا ومرتبة تنازلياً حسب الأهمية
-     * @param userid_p*
+     * @param userId_p*
     رقم المستعمل
      * @param isCompleted_p*
     هل تمت أم لا
@@ -52,9 +50,9 @@ public interface MyTaskQuery {
     قائمة مهمات مرتبة داخل كائن يتحدث بكل تغيير
 
      */
-    @Query("SELECT * FROM MyTask WHERE userId=:userid_p AND isCompleted=:isCompleted_p" +
+    @Query("SELECT * FROM MyTask WHERE userId=:userId_p AND isCompleted=:isCompleted_p" +
             " ORDER BY importance DESC")
-    LiveData<List<MyTask>> getAllTaskOrderedBy(long userid_p, boolean isCompleted_p);
+    LiveData<List<MyTask>> getAllTaskOrderedBy(long userId_p, boolean isCompleted_p);
 
     /**
      *
@@ -109,5 +107,12 @@ public interface MyTaskQuery {
     @Query("SELECT * FROM MyTask WHERE subId=:key_id " +
             "ORDER BY importance DESC")
     List<MyTask> getTasksBySubId(long key_id);
-}
+    @Query("SELECT * FROM MyTask WHERE taskId=:taskId " +
+            "ORDER BY importance DESC")
+    LiveData<MyTask> getTaskById(long taskId);
+    @Query("SELECT * FROM MyTask WHERE title=:title " +
+            "ORDER BY importance DESC")
+    LiveData<List<MyTask>> getTasksByTitle(String title);
 
+    ;
+}

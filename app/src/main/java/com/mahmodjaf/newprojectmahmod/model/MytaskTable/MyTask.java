@@ -21,6 +21,11 @@ public class MyTask {
 
     public long subId;
 
-    public long usrId;
+    public long KeyId;
 
-    }
+    public long taskId;
+
+    public long title;
+
+
+}

@@ -39,16 +39,16 @@ public class TaskRepository {
     public LiveData<List<MyTask>> getAllTasks() {
         return allTasks;
     }
-
-    /**
-     * جلب المهام المرتبطة بمعرف مستخدم معين (User ID).
-     *
-     * @param userId معرف المستخدم المراد جلب مهامه.
-     * @return قائمة المهام الخاصة بالمستخدم المحدد.
-     */
-    public LiveData<List<MyTask>> getTasksByUserId(long userId) {
-        return taskQuery.getTasksByUserId(userId);
-    }
+//
+//    /**
+//     * جلب المهام المرتبطة بمعرف مستخدم معين (User ID).
+//     *
+//     * @param userid معرف المستخدم المراد جلب مهامه.
+//     * @return قائمة المهام الخاصة بالمستخدم المحدد.
+//     */
+//    public LiveData<List<MyTask>> getTasksByUserId(long userid) {
+//        return taskQuery.getTasksByuserid(userid);
+//    }
 
     /**
      * جلب مهمة معينة بناءً على معرفها الفريد (Task ID).
