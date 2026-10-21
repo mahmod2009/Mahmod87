@@ -27,5 +27,9 @@ public class MyTask {
 
     public long title;
 
+    public String description;
+
+    public long priority;
+
 
 }
