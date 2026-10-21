@@ -12,6 +12,7 @@
         android:id="@+id/TextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_margin="20dp"
         android:gravity="center"
         android:text="User Registration"
         android:textSize="34sp" />
@@ -20,6 +21,7 @@
         android:id="@+id/etFullName"
         android:layout_width="402dp"
         android:layout_height="73dp"
+        android:layout_margin="20dp"
         android:ems="10"
         android:inputType="text"
         android:text="Full Name" />
@@ -28,6 +30,7 @@
         android:id="@+id/etEmail"
         android:layout_width="398dp"
         android:layout_height="61dp"
+        android:layout_margin="20dp"
         android:ems="10"
         android:inputType="text"
         android:text="Email" />
@@ -36,6 +39,7 @@
         android:id="@+id/etPassword"
         android:layout_width="398dp"
         android:layout_height="52dp"
+        android:layout_margin="20dp"
         android:ems="10"
         android:inputType="text"
         android:text="Password" />
@@ -44,6 +48,7 @@
         android:id="@+id/etPhone"
         android:layout_width="391dp"
         android:layout_height="74dp"
+        android:layout_margin="20dp"
         android:ems="10"
         android:inputType="text"
         android:text="Phone Number" />
@@ -52,6 +57,7 @@
         android:id="@+id/btnRegister"
         android:layout_width="364dp"
         android:layout_height="64dp"
+        android:layout_margin="20dp"
         android:text="Register" />
 
 </LinearLayout>

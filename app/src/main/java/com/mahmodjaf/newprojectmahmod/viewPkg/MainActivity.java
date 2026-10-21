@@ -1,6 +1,7 @@
 package com.mahmodjaf.newprojectmahmod.viewPkg;
 
 import android.os.Bundle;
+import android.widget.Button;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -14,6 +15,8 @@ import com.mahmodjaf.newprojectmahmod.model.MySubjectTable.MySubject;
 import com.mahmodjaf.newprojectmahmod.model.MySubjectTable.MySubjectQuery;
 
 public class MainActivity extends AppCompatActivity {
+    private Button button_2;
+    private Button button_3;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,6 +41,8 @@ public class MainActivity extends AppCompatActivity {
 
 
         setContentView(R.layout.activity_main);
+        button_2.findViewById(R.id.button2);
+        button_3.findViewById(R.id.button3);
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
