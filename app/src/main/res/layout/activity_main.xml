@@ -11,13 +11,13 @@
     tools:context=".viewPkg.MainActivity">
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/btnAddScreen"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Add New Task" />
 
     <Button
-        android:id="@+id/button3"
+        android:id="@+id/btnRegisterUser"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Register User" />
