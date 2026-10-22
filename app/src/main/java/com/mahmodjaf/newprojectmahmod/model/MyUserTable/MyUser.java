@@ -30,6 +30,5 @@ public class MyUser
                 '}';
     }
 
-    public static class MyUserQuery {
-    }
+
 }

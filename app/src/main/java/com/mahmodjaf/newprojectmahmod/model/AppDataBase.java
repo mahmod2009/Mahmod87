@@ -9,6 +9,7 @@ import androidx.room.RoomDatabase;
 import com.mahmodjaf.newprojectmahmod.model.MySubjectTable.MySubject;
 import com.mahmodjaf.newprojectmahmod.model.MySubjectTable.MySubjectQuery;
 import com.mahmodjaf.newprojectmahmod.model.MyUserTable.MyUser;
+import com.mahmodjaf.newprojectmahmod.model.MyUserTable.MyUserQuery;
 import com.mahmodjaf.newprojectmahmod.model.MytaskTable.MyTask;
 import com.mahmodjaf.newprojectmahmod.model.MytaskTable.MyTaskQuery;
 
@@ -24,7 +25,7 @@ import com.mahmodjaf.newprojectmahmod.model.MytaskTable.MyTaskQuery;
          * يعيد كائن لعمليات جدول المستخدمين
          * @return
          */
-        public abstract MyUser.MyUserQuery getMyUserQuery();
+        public abstract MyUserQuery getMyUserQuery();
 
         /**
          * يعيد كائن لعمليات جدول المواضيع

@@ -11,14 +11,12 @@ import com.mahmodjaf.newprojectmahmod.model.MytaskTable.MyTaskQuery;
 import java.util.List;
 
 /**
-        * مستودع المهام (MyTask) يعمل كطبقة وسيطة ومنظمة للوصول إلى بيانات المهام (TaskRepository).
-        * يقوم بفصل قاعدة بيانات
-* Room  و {@link MyTaskQuery}
-        * عن بقية أجزاء التطبيق (ViewModels).
-        */
+ * مستودع المهام (MyTask) يعمل كطبقة وسيطة ومنظمة للوصول إلى بيانات المهام (TaskRepository).
+ * يقوم بفصل قاعدة بيانات Room و {@link MyTaskQuery} عن بقية أجزاء التطبيق (ViewModels).
+ */
 public class TaskRepository {
     private final MyTaskQuery taskQuery;//واجهة الاستعلامات
-    private final LiveData<List<MyTask>> allTasks;//مبنى معطيات يحوي جميع المهلام المستخرجة
+    private final LiveData<List<MyTask>> allTasks;//مبنى معطيات يحوي جميع المهام المستخرجة
 
     /**
      * منشئ الكلاس (Constructor).
@@ -31,24 +29,25 @@ public class TaskRepository {
         taskQuery = db.getMyTaskQuery();
         allTasks = taskQuery.getAllTasks();
     }
+
     /**
-     *LiveData جلب جميع المهام الموجودة في قاعدة البيانات كـ.
+     * جلب جميع المهام الموجودة في قاعدة البيانات كـ LiveData.
      *
      * @return قائمة بجميع المهام المحدثة تلقائياً.
      */
     public LiveData<List<MyTask>> getAllTasks() {
         return allTasks;
     }
-//
-//    /**
-//     * جلب المهام المرتبطة بمعرف مستخدم معين (User ID).
-//     *
-//     * @param userid معرف المستخدم المراد جلب مهامه.
-//     * @return قائمة المهام الخاصة بالمستخدم المحدد.
-//     */
-//    public LiveData<List<MyTask>> getTasksByUserId(long userid) {
-//        return taskQuery.getTasksByuserid(userid);
-//    }
+
+    /**
+     * جلب المهام المرتبطة بمعرف مستخدم معين (User ID).
+     *
+     * @param userid معرف المستخدم المراد جلب مهامه.
+     * @return قائمة المهام الخاصة بالمستخدم المحدد.
+     */
+    public LiveData<List<MyTask>> getTasksByUserId(long userid) {
+        return taskQuery.getAllTaskOrderBy(userid);
+    }
 
     /**
      * جلب مهمة معينة بناءً على معرفها الفريد (Task ID).
@@ -77,7 +76,6 @@ public class TaskRepository {
      * @return قائمة المهام المطابقة.
      */
     public LiveData<List<MyTask>> getTasksByDescription(String description) {
-
         return taskQuery.getTasksByDescription(description);
     }
 
@@ -150,4 +148,3 @@ public class TaskRepository {
         taskQuery.deleteTaskById(taskId);
     }
 }
-
